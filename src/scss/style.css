@@ -14,6 +14,7 @@
 body {
   font-family: "Work Sans", sans-serif;
   background-color: var(--black-bg);
+  color: #fff;
 }
 
 ul {
@@ -25,7 +26,7 @@ a {
 }
 
 [class*=__container] {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 15px;
   width: 100%;
@@ -50,7 +51,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: clamp(1.25rem, -4.861rem + 12.73vw, 4.688rem);
+  gap: 75px;
 }
 .header .menu__body {
   display: flex;
@@ -108,4 +109,82 @@ a {
   .login:hover {
     background-color: var(--green-text);
   }
+}
+
+.hero__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero__content {
+  flex: 0 0 49.2957746479;
+  padding-bottom: 170px;
+}
+.hero__title {
+  font-size: 68px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.hero__img {
+  flex: 0 0 49.2957746479;
+}
+.hero__filters {
+  width: 900px;
+  height: 100px;
+  background-color: #fff;
+  position: absolute;
+  margin-top: 60px;
+}
+
+.filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 160px;
+  color: black;
+}
+.filter__btn {
+  padding: 5px;
+}
+.filter__btn button {
+  color: #fff;
+  background-color: var(--green-text);
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.block-filter {
+  position: relative;
+}
+.block-filter__button {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  padding-left: 40px;
+}
+.block-filter__dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0;
+}
+.block-filter__type {
+  color: var(--gray-text);
+  font-weight: 400;
+  padding-right: 5px;
+}
+.block-filter__header {
+  display: flex;
+  align-items: center;
+}
+.block-filter__icon {
+  background: url("../icons/dropdown-arrow.svg") center center no-repeat;
+  width: 5px;
+  height: 10px;
 }/*# sourceMappingURL=style.css.map */
