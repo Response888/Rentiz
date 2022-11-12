@@ -172,8 +172,13 @@ a {
   grid-template-columns: 1fr 1fr 1fr 160px;
   color: black;
 
+  .block-filter:nth-child(2){
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+  }
+
   &__btn{
-    padding: 5px;
+    padding: 5px; 
 
     button{
       color: #fff;
@@ -199,7 +204,6 @@ a {
     width: 100%;
     flex-direction: column;
     padding-left: 40px;
-
     
   }
 
@@ -210,20 +214,65 @@ a {
     left: 0;
     background-color: #fff;
     opacity: 0;
+    // border-radius: 5px;
+    visibility: hidden;
+    transition: 0.3s;
+
+
+    &._active{
+      visibility: visible;
+      opacity: 1;
+      transition: 0.3s;
+    }
   }
+
+
+  &__item{
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover{
+      background-color: #e8e8e8;
+      
+    }
+  }
+
   &__type{
     color: var(--gray-text);
     font-weight: 400;
     padding-right: 5px;
+    cursor: pointer;
   }
 
   &__header{
     display: flex;
-    align-items: center
+    align-items: center;
   }
   &__icon{
     background: url('../icons/dropdown-arrow.svg') center center no-repeat;
     width: 5px;
     height: 10px;
+    transition: 0.3s;
+
+    &._active{
+      transform: rotate(180deg);
+      transition: 0.3s;
+    }
+  }
+}
+
+
+.featured{
+  padding: 60px 0;
+
+  &__title{
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 60px;
+  }
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
